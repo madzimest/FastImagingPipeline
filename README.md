@@ -23,7 +23,7 @@ The pipeline performs the following steps for a given observation:
 3. Flux extraction, CASA’s `imfit` measures the flux density of the target in each image. Results are written to text files:
    - Light curve: time vs. flux (and error)
    - Spectrum: frequency vs. flux (if requested)
-4. Optional cleanup – Intermediate FITS files can be removed to save space.
+4. Optional cleanup, Intermediate FITS files can be removed to save space.
 
 The pipeline is parallelised using Python’s `multiprocessing` pool, and the SLURM batch script allocates the necessary resources.
 
@@ -32,9 +32,9 @@ The pipeline is parallelised using Python’s `multiprocessing` pool, and the SL
 ## Requirements
 
 ### Software
-- CASA (version 5.6 or later recommended) – used for `split` and `imfit`.
-- wsclean – the imager (must be in the `PATH`).
-- Python 3 – standard libraries only (`datetime`, `os`, `glob`, `shutil`, `multiprocessing`).
+- CASA (version 5.6 or later recommended), used for `split` and `imfit`.
+- wsclean, the imager (must be in the `PATH`).
+- Python 3, standard libraries only (`datetime`, `os`, `glob`, `shutil`, `multiprocessing`).
 
 ### Hardware / Cluster
 - The pipeline is intended for a SLURM‑managed cluster.
